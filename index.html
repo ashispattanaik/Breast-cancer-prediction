@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Breast Cancer Safety Prediction</h1>
+        <form id="cancerForm">
+            <!-- Input fields for parameters with safe ranges in labels -->
+            <div class="input-group">
+                <label>Mean Radius (5-30): </label>
+                <input type="number" id="radius" step="0.01" placeholder="Enter mean radius">
+                <span id="radiusResult"></span>
+            </div>
+            <div class="input-group">
+                <label>Mean Texture (10-40): </label>
+                <input type="number" id="texture" step="0.01" placeholder="Enter mean texture">
+                <span id="textureResult"></span>
+            </div>
+            <div class="input-group">
+                <label>Mean Perimeter (50-200): </label>
+                <input type="number" id="perimeter" step="0.01" placeholder="Enter mean perimeter">
+                <span id="perimeterResult"></span>
+            </div>
+            <div class="input-group">
+                <label>Mean Area (100-3000): </label>
+                <input type="number" id="area" step="0.01" placeholder="Enter mean area">
+                <span id="areaResult"></span>
+            </div>
+            <div class="input-group">
+                <label>Mean Smoothness (0.05-0.2): </label>
+                <input type="number" id="smoothness" step="0.001" placeholder="Enter mean smoothness">
+                <span id="smoothnessResult"></span>
+            </div>
+            <div class="input-group">
+                <label>Mean Compactness (0.02-0.35): </label>
+                <input type="number" id="compactness" step="0.001" placeholder="Enter mean compactness">
+                <span id="compactnessResult"></span>
+            </div>
+            <div class="input-group">
+                <label>Mean Concavity (0-0.4): </label>
+                <input type="number" id="concavity" step="0.001" placeholder="Enter mean concavity">
+                <span id="concavityResult"></span>
+            </div>
+            <div class="input-group">
+                <label>Mean Concave Points (0-0.2): </label>
+                <input type="number" id="concavePoints" step="0.001" placeholder="Enter mean concave points">
+                <span id="concavePointsResult"></span>
+            </div>
+            <div class="input-group">
+                <label>Mean Symmetry (0.1-0.3): </label>
+                <input type="number" id="symmetry" step="0.001" placeholder="Enter mean symmetry">
+                <span id="symmetryResult"></span>
+            </div>
+            <div class="input-group">
+                <label>Mean Fractal Dimension (0.05-0.1): </label>
+                <input type="number" id="fractalDimension" step="0.001" placeholder="Enter mean fractal dimension">
+                <span id="fractalDimensionResult"></span>
+            </div>
+            <!-- Button to trigger prediction -->
+            <button type="button" onclick="predictSafety()">Check Safety</button>
+        </form>
+        <!-- Display result and probability -->
+        <div id="result"></div>
+        <div id="probability" style="font-size: 2em; font-weight: bold; color: red;"></div>
+
+        <!-- Canvas for chart -->
+        <canvas id="resultChart"></canvas>
+
+        <!-- Footer with credits -->
+        <footer>
+            Made by ASHIS PATTANAIK | Roll No: 2105779 | KIIT UNIVERSITY
+        </footer>
+    </div>
+    <!-- Include external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

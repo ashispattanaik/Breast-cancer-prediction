@@ -1,0 +1,84 @@
+/* Dark Theme with Background Image */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('image.jpg'); /* Reference to the image in the same folder */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(30, 30, 30, 0.9); /* Transparent dark background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #bbb;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+span {
+    display: block;
+    margin-top: 5px;
+}
+
+.safe {
+    color: #4CAF50;
+}
+
+.unsafe {
+    color: #ff5555;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+}
